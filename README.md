@@ -38,8 +38,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|text|string||
-|image|text||
+|body|text||
+|image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
