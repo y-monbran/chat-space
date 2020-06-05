@@ -1,3 +1,12 @@
 .side-bar
   .side-bar__user-name
+    .side-box
+      %p.name-box
+        igarashi
+      %p.icon-box
+        = link_to "#", class: "group-icon" do
+          = icon('far', 'edit')
+        = link_to "#", class: "config-icon" do
+          = icon('fas', 'cog')
   .side-bar__group-list
+  

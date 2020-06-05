@@ -11,6 +11,31 @@
     &__user-name {
       height: 100px;
       background-color: #253141;
+      display: flex;
+      align-items: center;
+      .side-box {
+        height: 20px;
+        width: 260px;
+        margin: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .name-box {
+          color: #ffffff;
+        }
+        .icon-box {
+          display: flex;
+          justify-content: right;
+          text-decoration: none;
+          .group-icon {
+            color: #ffffff;
+          }
+          .config-icon {
+            color: #ffffff;
+            margin-left: 5px;
+          }
+        }
+      }
     }
     &__group-list {
       height: calc(100vh - 100px);
