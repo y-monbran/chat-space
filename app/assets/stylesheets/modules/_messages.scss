@@ -20,8 +20,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        font-weight: bold;
         .name-box {
           color: #ffffff;
+          font-size: 16px;
         }
         .icon-box {
           display: flex;
@@ -40,6 +42,22 @@
     &__group-list {
       height: calc(100vh - 100px);
       background-color: #2f3e51;
+      .group-lists {
+        font-weight: bold;
+        color: #ffffff;
+        padding: 20px 20px 40px 20px;
+        .group-name {
+          p {
+            font-size: 15px;
+            margin-bottom: 5px;
+          }
+        }
+        .group-message {
+          p {
+            font-size: 11px;
+          }
+        }
+      }
     }
   }
   .main-chat {
