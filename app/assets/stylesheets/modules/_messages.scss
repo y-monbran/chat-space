@@ -104,6 +104,26 @@
     &__message-list {
       height: calc(100vh - 190px);
       background-color: #fafafa;
+      .message-lists {
+        padding: 35px 0 0 40px;
+      }
+      .message-lists-header {
+        margin-bottom: 12px;
+        display: flex;
+        .message-lists-name {
+          font-size: 16px;
+          color: #333333;
+        }
+        .message-lists-datetime {
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+      .messages {
+        font-size: 14px;
+        color: #434A54;
+        margin-bottom: 46px;
+      }
     }
     &__message-form {
       height: 90px;
