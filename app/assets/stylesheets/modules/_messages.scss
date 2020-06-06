@@ -66,6 +66,40 @@
     &__group-info {
       height: 100px;
       border-bottom: 1px solid #eeeeee;
+      display: flex;
+      justify-content: space-between;
+      .header-leftbox {
+        padding-left: 40px;
+        .group-title {
+          font-size: 20px;
+          color: #333333;
+          margin-top: 35px;
+          .group-member {
+            font-size: 12px;
+            color: #999999;
+            display: flex;
+            margin-top: 15px;
+          }
+        }
+      }
+      .header-rightbox {
+        padding-right: 40px;
+        display: flex;
+        align-items: center;
+        a {
+          text-decoration: none;
+          .edit-btn {
+            height: 40px;
+            width: 72px;
+            font-size: 16px;
+            color: #38aef0;
+            border: 1px solid #38aef0;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+          } 
+        }  
+      }
     }
     &__message-list {
       height: calc(100vh - 190px);
