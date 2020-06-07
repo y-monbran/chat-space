@@ -1,0 +1,44 @@
+.main-chat
+  .main-chat__group-info
+    .header-leftbox
+      %h2.group-title
+        test
+        %ul.group-member
+          Member:
+          %li
+            igarashi
+    .header-rightbox
+      = link_to "#" do
+        .edit-btn
+          Edit
+  .main-chat__message-list
+    .message-lists
+      .message-lists-header
+        %p.message-lists-name
+          igarashi
+        %p.message-lists-datetime
+          2020/06/06(sat) 10:00:00
+      .messages
+        おはよう！
+      .message-lists-header
+        %p.message-lists-name
+          igarashi
+        %p.message-lists-datetime
+          2020/06/06(sat) 10:30:00
+      .messages
+        朝だ！
+      .message-lists-header
+        %p.message-lists-name
+          igarashi
+        %p.message-lists-datetime
+          2020/06/06(sat) 11:00:00
+      .messages
+        晴れだ！
+  .main-chat__message-form
+    %form.new-message
+      .input-box
+        %input{placeholder: "type a message", type: "text", class: "input-text"}
+        %label{class: "input-imagebox"}
+          = icon('far', 'image')
+          %input{type: "file", class: "input-imagebox-file"}
+      %input.submit-btn{type: "submit", name: "commit", value: "Send"}  
