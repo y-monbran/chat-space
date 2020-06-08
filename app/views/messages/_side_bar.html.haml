@@ -4,23 +4,15 @@
       %p.name-box
         = current_user.name
       %p.icon-box
-        = link_to "#", class: "group-icon" do
+        = link_to new_group_path(current_user), class: "group-icon" do
           = icon('far', 'edit')
         = link_to edit_user_path(current_user), class: "config-icon" do
           = icon('fas', 'cog')
   .side-bar__group-list
-    .group-lists
-      %p.group-name
-        techcamp
-      %p.group-message
-        まだメッセージはありません
-    .group-lists
-      %p.group-name
-        techcamp
-      %p.group-message
-        まだメッセージはありません
-    .group-lists
-      %p.group-name
-        techcamp
-      %p.group-message
-        まだメッセージはありません
+    - current_user.groups.each do |group|
+      .group-lists
+        = link_to '#' do
+          %p.group-name
+            = group.name
+          %p.group-message
+            まだメッセージはありません
