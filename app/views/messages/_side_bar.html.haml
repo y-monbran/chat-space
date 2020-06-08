@@ -4,7 +4,7 @@
       %p.name-box
         = current_user.name
       %p.icon-box
-        = link_to "#", class: "group-icon" do
+        = link_to new_group_path(current_user), class: "group-icon" do
           = icon('far', 'edit')
         = link_to edit_user_path(current_user), class: "config-icon" do
           = icon('fas', 'cog')
