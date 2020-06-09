@@ -2,42 +2,24 @@
   .main-chat__group-info
     .header-leftbox
       %h2.group-title
-        test
-        %ul.group-member
+        = @group.name            
+        %ul.group-member 
           Member:
-          %li
-            igarashi
+          - @group.users.each do |user|
+            %li
+              = user.name
     .header-rightbox
       = link_to "#" do
         .edit-btn
           Edit
   .main-chat__message-list
-    .message-lists
       .message-lists-header
-        %p.message-lists-name
-          igarashi
-        %p.message-lists-datetime
-          2020/06/06(sat) 10:00:00
-      .messages
-        おはよう！
-      .message-lists-header
-        %p.message-lists-name
-          igarashi
-        %p.message-lists-datetime
-          2020/06/06(sat) 10:30:00
-      .messages
-        朝だ！
-      .message-lists-header
-        %p.message-lists-name
-          igarashi
-        %p.message-lists-datetime
-          2020/06/06(sat) 11:00:00
-      .messages
-        晴れだ！
+    = render @messages
+      
   .main-chat__message-form
     = form_with model: [@group, @message], html: {class: "new-message"}, local: true do |f|
       .input-box
-        = f.text_field :content, class: 'input-text', placeholder: 'type a message'
+        = f.text_field :body, class: 'input-text', placeholder: 'type a message'
         = f.label :image, class: 'input-imagebox' do
           = icon('far', 'image', class: 'input-icon')
           = f.file_field :image, class: 'input-imagebox-file'
