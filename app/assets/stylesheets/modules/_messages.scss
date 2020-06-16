@@ -106,7 +106,8 @@
     &__message-list {
       height: calc(100vh - 190px);
       background-color: #fafafa;
-      .message-lists {
+      overflow: scroll;
+      .message-list {
         padding: 35px 0 0 40px;
       }
       .message-lists-header {
@@ -119,6 +120,7 @@
         .message-lists-datetime {
           font-size: 12px;
           color: #999999;
+          margin-left: 5px;
         }
       }
       .messages {
