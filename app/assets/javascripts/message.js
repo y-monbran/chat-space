@@ -44,7 +44,7 @@ $(function(){
     let url = $(this).attr('action');
     $.ajax({
       url: url,
-      type: 'POST',  //同期通信でいう『HTTPメソッド』
+      type: 'POST',  
       data: formData,  
       dataType: 'json',
       processData: false,
@@ -54,7 +54,6 @@ $(function(){
       let html = buildHTML(data);
       $('.main-chat__message-list').append(html);
       $('.main-chat__message-list').animate({ scrollTop: $('.main-chat__message-list')[0].scrollHeight});
-      // $('form')[0].reset();
       $('.new-message')[0].reset(); 
       $('.submit-btn').attr('disabled', false);
     })
